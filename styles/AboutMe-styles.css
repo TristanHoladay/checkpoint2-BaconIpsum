@@ -1,11 +1,11 @@
 html, body {
     margin: 0;
-}
+} 
 
 #header {
     display: grid;
     grid-template-columns: 1fr;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 300px;
@@ -13,18 +13,18 @@ html, body {
 }
 
 #welcome {
-    margin-top: 3em;
-    text-align: center;
     align-self: center;
     justify-self: center;
+    text-align: center;
     border: 1px solid;
     width: 90vw;
-    font-size: 2.2em;
+    font-size: 3em;
     color: white;
 }
 
 #nav {
     width: 90%;
+    align-self: end;
 }
 
 #nav ul {
@@ -63,30 +63,116 @@ main {
     text-align: center;
 }
 
+#video-container h1 {
+    font-size: 2em;
+}
+
 #video-container iframe {
-    width: 300px;
+    width: calc(95%);
     height: 300px;
 }
 
-#highlights-container {
+#highlights {
+    width: 90%;
     display: flex;
     flex-wrap: wrap; 
+    justify-content: center;
 }
 
 .highlight-wrapper {
+    width: 90%;
+    height: auto;
+    margin-left: .3em;
+    font-size: 1.2em;
 }
 
-.highlight-wrapper p img {
+.heading-container {
+    position: relative;
+}
+
+.highlight-wrapper img {
+    left: 10px;
+    bottom: 3.2em;
     margin: 1em 0;
-    min-width: 200px;
-    max-width: 200px;
+    margin-right: .4em;
+    min-width: 300px;
+    max-width: 100%;
     height: auto;
-    float: left;
+    border-radius: 10px 10px;
 }
 
 .highlight-wrapper h1 {
-    float: right;
+    position: absolute;
+    text-align: center;
+    width: 45%;
+    font-size: 2em;
+    padding: 3px;
+    background: rgba(0, 0, 255, 0.247);
+    border-radius: 10px 10px;
+}
+
+#mission {
+    top: -.2em;
+    right: 0;
+}
+
+#training {
+    top: -.2em;
+    right: 0;
 }
 
 .highlight-wrapper p {
+    margin-left: 1em;
+    width: 90%;
+    
+}
+
+.highlight-wrapper ul {
+    list-style: upper-roman;
+}
+
+.highlight-wrapper li {
+    padding: 10px 3px;
+}
+
+@media (min-width: 900px) {
+
+    #welcome {
+        width: 30%;
+    }
+
+    #nav ul li {
+        margin: 1em 3em;  
+        font-size: 1.5em;
+    }
+
+    main {
+        background: rgb(27,27,27);
+        color: white;
+    }
+
+    #video-container {
+        width: 100%;
+    }
+
+    #highlights {
+        justify-content: start;
+        flex-wrap: none;
+    }
+
+    #video-container iframe {
+        max-width: 700px;
+        margin-bottom: 2em;
+    }
+
+    .highlight-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .highlight-wrapper p {
+        font-size: 1.5em;
+    }
+
 }
