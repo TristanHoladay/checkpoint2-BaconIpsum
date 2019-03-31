@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     background: rgb(244,103,49);
+    font-family: 'Crimson Text', serif;
 } 
 
 #header {
@@ -54,12 +55,13 @@ main {
     justify-items: center;
 }
 
-#article-container {
+#article-container.animated {
     margin: 1em 0;
     width: 90%;
     display: grid;
     grid-template-columns: 1fr;
     border: 1px solid;
+    animation-duration: 4s;
 }
 
 #article-container h2 {
@@ -95,6 +97,15 @@ footer {
         left: 30%;
     }
 
+    #article-container ul li {
+        font-size: 1.5em;
+    }
+
+    #article-container p {
+        padding: 0 1em;
+        font-size: 1.5em;
+    }
+
     #nav ul li {
         font-size: 2em;
         margin: 0 3em;
@@ -107,6 +118,7 @@ footer {
     }
 
     #welcome {
+        top: 40%;
         left: 35%;
     }
 }

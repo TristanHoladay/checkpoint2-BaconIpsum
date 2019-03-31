@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     background: rgb(43,205,192);
+    font-family: 'Crimson Text', serif;
 } 
 
 #header {
